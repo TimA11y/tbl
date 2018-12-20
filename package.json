@@ -1,0 +1,17 @@
+{
+  "name": "tbl",
+  "version": "1.0.0",
+  "description": "Creates a basic HTML table and copies it to the clipboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Harshbarger",
+  "license": "ISC",
+  "bin": {
+    "tbl": "index.js"
+  },
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}

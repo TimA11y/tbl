@@ -7,9 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tim Harshbarger",
-  "license": "ISC",
+  "license": "MIT",
   "bin": {
     "tbl": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimA11y/tbl"
   },
   "dependencies": {
     "commander": "^2.19.0"

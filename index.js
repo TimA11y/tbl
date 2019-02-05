@@ -31,19 +31,19 @@ console.log(`Columns: ${columns}, Rows: ${rows}`);
 
 let table = `<table>${EOL}`;
 
-for (let x = 0; x < columns; x++) {
-  table = table + `  <tr>${EOL}`;
-  for (let y = 0; y < rows; y++) {
-    if (x === 0) {
-      table = table + `    <th scope="col"></th>${EOL}`;
-    } else if (y === 0) {
-      table = table + `    <th scope="row"></th>${EOL}`;
+for (let r = 0; r < rows; r++) {
+  table += `  <tr>${EOL}`;
+  for (let c = 0; c < columns; c++) {
+    if (r === 0) {
+      table += `    <th scope="col">||${r}${c}||</th>${EOL}`;
+    } else if (c === 0) {
+      table += `    <th scope="row">--${r}${c}--</th>${EOL}`;
     } else {
-      table = table + `    <td></td>${EOL}`;
+      table += `    <td>**${r}${c}**</td>${EOL}`;
     } // end if else if else.
-  } // end y.
-  table = table + `  </tr>${EOL}`;
-} // end x.
+  } // end for c.
+  table += `  </tr>${EOL}`;
+} // end for r.
 table = table + `</table>${EOL}`;
 
 fs.writeFileSync(`${__dirname}/temp.txt`, table, {encoding: "utf8"});
